@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+```
+=======
+>>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
+# R
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Data
+data/raw/*.rds
+data/raw/*.csv
+data/processed/*.rds
+*.h5
+
+# Models
+models/saved_models/*.rds
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.swp
+*.swo
