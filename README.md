@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🧬 RxPression: Drug Response Prediction from Gene Expression Data
 
 [![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
