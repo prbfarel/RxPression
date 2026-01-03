@@ -1,14 +1,4 @@
-# 🧬 RxPression: Drug Response Prediction from Gene Expression Data
-
-[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
-
-## 📋 Overview
-
-Machine learning pipeline untuk memprediksi respons sel kanker terhadap obat kemoterapi berdasarkan profil ekspresi gen. Project ini menggunakan data dari **GDSC (Genomics of Drug Sensitivity in Cancer)** untuk membangun model prediktif yang dapat membantu personalized cancer therapy.
-
-## 🎯 Tujuan Project
-=======
-#  Drug Response Prediction from Gene Expression Data
+#  RxPression: Drug Response Prediction from Gene Expression Data
 
 [![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
 
@@ -17,30 +7,20 @@ Machine learning pipeline untuk memprediksi respons sel kanker terhadap obat kem
 Machine learning pipeline untuk memprediksi respons sel kanker terhadap obat kemoterapi berdasarkan profil ekspresi gen. Project ini menggunakan data dari **GDSC (Genomics of Drug Sensitivity in Cancer)** untuk membangun model prediktif yang dapat membantu personalized cancer therapy.
 
 ##  Tujuan Project
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
-
 - Memprediksi IC50 (drug sensitivity) dari profil ekspresi gen
 - Identifikasi biomarker genetik untuk drug response
 - Perbandingan berbagai algoritma machine learning
 - Interpretasi model untuk clinical insight
 
-<<<<<<< HEAD
-## 🔬 Dataset
-=======
 ##  Dataset
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
-
 **Source:** GDSC (Genomics of Drug Sensitivity in Cancer)
 - **Gene Expression:** RNA-seq dari ~1000 cell lines
 - **Drug Response:** IC50 values untuk 100+ anticancer drugs
 - **Features:** ~17,000 genes
 - **Samples:** ~700 cell lines dengan complete data
 
-<<<<<<< HEAD
-## 🛠️ Technologies
-=======
+
 ##  Technologies
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
 
 - **Language:** R (4.0+)
 - **Key Libraries:**
@@ -51,13 +31,9 @@ Machine learning pipeline untuk memprediksi respons sel kanker terhadap obat kem
   - `glmnet` - Elastic net regression
   - `ggplot2` - Visualization
   - `tidyverse` - Data manipulation
-<<<<<<< HEAD
- 
-## 📦 Installation
-=======
 
 ##  Installation
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
+
 ```r
 # Install required packages
 install.packages(c("tidyverse", "caret", "xgboost", "randomForest", 
@@ -90,11 +66,7 @@ source("scripts/05_model_evaluation.R")
 source("scripts/06_prediction.R")
 ```
 
-<<<<<<< HEAD
-## 📊 Workflow
-=======
 ##  Workflow
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
 ```
 Raw Data → Preprocessing → Feature Selection → Model Training → Evaluation → Prediction
    ↓            ↓               ↓                   ↓              ↓           ↓
@@ -102,12 +74,6 @@ Raw Data → Preprocessing → Feature Selection → Model Training → Evaluati
            Missing Data    Correlation         XGBoost          RMSE
            Log Transform   PCA/LASSO           Elastic Net      MAE
 ```
-<<<<<<< HEAD
-## 📈 Results
-=======
-
-##  Results
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
 
 ### Model Performance (Expected)
 
@@ -131,7 +97,7 @@ drug-response-prediction/
 └── utils/             # Helper functions
 ```
 
-## 🔍 Key Features
+##  Key Features
 
 1. **Automated Pipeline:** End-to-end dari download hingga prediction
 2. **Multiple Algorithms:** RF, XGBoost, Elastic Net, ensemble
@@ -140,7 +106,7 @@ drug-response-prediction/
 5. **Visualization:** Heatmaps, feature importance, prediction plots
 6. **Interpretability:** SHAP values, partial dependence plots
 
-## 📖 Usage Example
+##  Usage Example
 ```r
 # Load the trained model
 model <- readRDS("models/saved_models/xgboost_model.rds")
@@ -155,37 +121,22 @@ predictions <- predict(model, newdata = new_data)
 print(predictions)
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-<<<<<<< HEAD
 =======
 
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
-## 📚 References
+##  References
 
 1. Yang, W. et al. (2013). "Genomics of Drug Sensitivity in Cancer (GDSC)". *Nucleic Acids Research*.
 2. Garnett, M.J. et al. (2012). "Systematic identification of genomic markers of drug sensitivity in cancer cells". *Nature*.
 
 ## 👤 Author
-
-<<<<<<< HEAD
-[Farel Immanuel W. Purba]
-=======
 [Farel Immanuel]
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
 - GitHub: [@prbfarel](https://github.com/prbfarel)
 - Email: farelpurba09@gmail.com
 
-## 🙏 Acknowledgments
-<<<<<<< HEAD
-
+##  Acknowledgments
 - GDSC consortium for providing the data
 - Bioconductor community for PharmacoGx package
-
-=======
-- GDSC consortium for providing the data
-- Bioconductor community for PharmacoGx package
-
 ---
->>>>>>> 44116a8c87322994fa8fc8344e558bc016fc7ba3
