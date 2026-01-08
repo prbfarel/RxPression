@@ -1,6 +1,8 @@
 #  RxPression
 
-![RxPression](RxPression/results/figures/RxPression.png)
+<p align="center">
+  <img src="results/figures/RxPression.png" width="300" title="Book Project">
+</p>
 
 ![Status](https://img.shields.io/badge/status-complete-success)
 [![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
