@@ -1,0 +1,8 @@
+Metric,Training,Test
+Mean R²,0.228,0.172
+Median R²,0.199,0.147
+SD R²,0.122,0.146
+Min R²,0.065,0.000
+Max R²,0.555,0.594
+Mean RMSE,0.076,0.089
+Mean MAE,0.057,0.067

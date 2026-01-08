@@ -1,0 +1,4 @@
+Algorithm,N_Drugs,Win_Percentage,Mean_Train_R2,Mean_Test_R2,Generalization_Gap,Speed_per_Drug
+Elastic Net,97,56.1%,0.234,0.172,0.062,5s
+Random Forest,22,12.7%,0.202,0.155,0.047,100s
+SVM,54,31.2%,0.227,0.179,0.048,40s

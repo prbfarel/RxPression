@@ -1,0 +1,11 @@
+Rank,Drug,Algorithm,Test_R2,Train_R2,N_Features,Clinical_Use
+1,Sorafenib,elastic_net,0.594,0.397,200,Kidney/Liver cancer
+2,ABT-737,elastic_net,0.523,0.555,200,Blood cancers
+3,Venetoclax,svm,0.513,0.402,200,CLL/AML (FDA-approved)
+4,Nilotinib,elastic_net,0.512,0.255,200,CML (FDA-approved)
+5,Irinotecan,elastic_net,0.509,0.492,200,Colorectal cancer
+6,Vorinostat,elastic_net,0.509,0.474,200,Cutaneous T-cell lymphoma
+7,Nutlin-3a (-),svm,0.478,0.520,200,p53 pathway modulator
+8,Camptothecin,elastic_net,0.450,0.529,200,Topoisomerase inhibitor
+9,Cytarabine,svm,0.448,0.418,200,AML (FDA-approved)
+10,Topotecan,elastic_net,0.410,0.481,200,Ovarian cancer

@@ -1,0 +1,85 @@
+=============================================================================
+GDSC Feature Selection Report
+=============================================================================
+
+Date: 2026-01-05 16:32:23.299387
+Random seed: 123
+
+Input Data:
+  - Samples: 640
+  - Initial genes: 5000
+  - Drugs: 173
+
+Feature Selection Mehtods:
+
+1. Correlation Analysis:
+   - Drugs analyzed: 173
+   - Correlation values computed: 865,000
+   - Method: Pearson correlation
+
+2. Mutual Information:
+   - Drugs analyzed: 20
+   - Method: Discretization + MI
+   - Bins: 10
+
+3. LASSO Regression:
+   - Drugs analyzed: 9
+   - Method: Cross-validated LASSO (alpha=1)
+   - Average features per drug: 91.1
+
+4. Random Forest:
+   - Drugs analyzed: 5
+   - Method: RF with 100 trees
+   - Importance metric: %IncMSE
+
+Ensemble Feature Selection:
+
+  - Top N per method: 100
+  - Final features per drug: 200
+  - Drugs with feature sets: 173
+
+Selected Features Summary:
+
+  - Total unique genes selected: 3638
+  - Most frequent gene: ENSG00000105122 (in 86 drugs)
+  - Average genes per drug: 110.4
+  - Median genes per drug: 100.0
+
+Top 10 Most Frequently Selected Genes:
+
+  1. ENSG00000105122: 86 drugs
+  2. ENSG00000182162: 83 drugs
+  3. ENSG00000186517: 82 drugs
+  4. ENSG00000072818: 81 drugs
+  5. ENSG00000104067: 80 drugs
+  6. ENSG00000185811: 80 drugs
+  7. ENSG00000143119: 79 drugs
+  8. ENSG00000100060: 77 drugs
+  9. ENSG00000123338: 76 drugs
+  10. ENSG00000009790: 75 drugs
+
+
+Output FIles:
+
+  Data files (in data/processed/):
+    - correlation_results.rds
+    - mi_results.rds
+    - lasso_results.rds
+    - rf_results.rds
+    - feature_selection_results.rds
+    - selected_features_per_drug.rds
+
+  Figures (in figures/feature_selection/):
+    - 01_gene_selection_frequency.png
+    - 02_method_comparison.png
+    - 03_correlation_distribution.png
+
+=============================================================================
+FEATURE SELECTION COMPLETED SUCCESSFULLY
+=============================================================================
+
+Next Steps:
+  1. Review feature selection visualizations
+  2. Examine top selected genes for biological relevance
+  3. Run 05_train.R to train models with selected features
+

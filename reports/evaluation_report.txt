@@ -1,0 +1,87 @@
+=============================================================================
+GDSC Model Evaluation Report
+=============================================================================
+
+Date: 2026-01-07 10:18:18.993795
+
+Data Summary:
+  - Training samples: 640
+  - Test samples: 161
+  - Drugs evaluated: 173
+  - Total predictions: 27853
+
+Performance Metrics:
+
+Training Set (5-fold CV):
+  - Mean R²:   0.228 ± 0.122
+  - Median R²: 0.199
+  - Range:     [0.065, 0.555]
+
+Test Set (Hold-out):
+  - Mean R²:   0.172 ± 0.146
+  - Median R²: 0.147
+  - Range:     [0.000, 0.594]
+
+Generalization:
+  - Mean train-test gap: 0.056
+  - Correlation (train vs test R²): 0.829
+
+Overfitting Analysis:
+
+  Drugs with excellent generalization (<0.05 gap): 79 (45.7%)
+  Drugs with moderate overfitting (0.05-0.1): 50 (28.9%)
+  Drugs with high overfitting (>0.1): 44 (25.4%)
+
+Algorithm Performance:
+
+# A tibble: 3 × 5
+  algorithm     count train_r2 test_r2    gap
+  <chr>         <int>    <dbl>   <dbl>  <dbl>
+1 elastic_net      97    0.234   0.172 0.0618
+2 random_forest    22    0.202   0.155 0.0474
+3 svm              54    0.227   0.179 0.0479
+
+Top 10 Best Performing Drugs (by test R²):
+
+  1. Sorafenib: Test R² = 0.594 (Train R² = 0.397)
+  2. Abt-737: Test R² = 0.523 (Train R² = 0.555)
+  3. Venetoclax: Test R² = 0.513 (Train R² = 0.402)
+  4. Nilotinib: Test R² = 0.512 (Train R² = 0.255)
+  5. Irinotecan: Test R² = 0.509 (Train R² = 0.492)
+  6. Vorinostat: Test R² = 0.509 (Train R² = 0.474)
+  7. Nutlin-3a (-): Test R² = 0.478 (Train R² = 0.520)
+  8. Camptothecin: Test R² = 0.450 (Train R² = 0.529)
+  9. Cytarabine: Test R² = 0.448 (Train R² = 0.418)
+  10. Topotecan: Test R² = 0.410 (Train R² = 0.481)
+
+Top 10 Worst Performing Drugs (by test R²):
+
+  1. Tamoxifen: Test R² = 0.000 (Train R² = 0.130)
+  2. BMS-345541 free base: Test R² = 0.001 (Train R² = 0.129)
+  3. BPD-00008900: Test R² = 0.002 (Train R² = 0.129)
+  4. UMI-77: Test R² = 0.002 (Train R² = 0.100)
+  5. GSK-1904529A: Test R² = 0.003 (Train R² = 0.125)
+  6. AGI-5198: Test R² = 0.003 (Train R² = 0.074)
+  7. CZC24832: Test R² = 0.003 (Train R² = 0.074)
+  8. GSK591: Test R² = 0.003 (Train R² = 0.093)
+  9. AZD1208: Test R² = 0.005 (Train R² = 0.078)
+  10. LY2109761: Test R² = 0.005 (Train R² = 0.076)
+
+Output Files:
+
+  Results:
+    - test_predictions.rds/csv
+    - test_performance.rds/csv
+
+  Figures:
+    - 01_train_vs_test_r2.png
+    - 02_r2_distributions.png
+    - 03_predictions_top_drugs.png
+    - 04_algorithm_comparison.png
+    - 05_overfitting_analysis.png
+    - 06_performance_vs_features.png
+
+=============================================================================
+Evaluation Completed Succesfully!
+=============================================================================
+

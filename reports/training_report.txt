@@ -1,0 +1,78 @@
+=============================================================================
+GDSC Model Training REport
+=============================================================================
+
+Date: 2026-01-07 10:00:54.960441
+Training duration: 105.8 minutes
+
+Configuration:
+  - Algorithms: elastic_net, random_forest, svm
+  - CV folds: 5
+  - Parallel cores: 3
+
+Data:
+  - Training samples: 640
+  - Total genes: 5000
+  - Total drugs: 173
+  - Drugs trained: 173
+
+Results:
+  - Successful training: 173/173 drugs
+
+Performance Metrics:
+
+  R² Score:
+    - Mean: 0.228
+    - Median: 0.199
+    - SD: 0.122
+    - Min: 0.065
+    - Max: 0.555
+
+  RMSE:
+    - Mean: 0.076
+    - Median: 0.068
+
+  MAE:
+    - Mean: 0.057
+    - Median: 0.051
+
+Algorithm Comparison:
+
+  Elastic Net - Average R²: 0.221
+  Random Forest - Average R²: 0.201
+  SVM - Average R²: 0.215
+
+Best Algorithm Frequency:
+
+  elastic_net: 97 drugs
+  random_forest: 22 drugs
+  svm: 54 drugs
+
+Top 5 Best Performing Drugs:
+
+  1. Abt-737: R² = 0.555 (elastic_net)
+  2. Camptothecin: R² = 0.529 (elastic_net)
+  3. Afatinib: R² = 0.526 (elastic_net)
+  4. Nutlin-3a (-): R² = 0.520 (svm)
+  5. Adavosertib: R² = 0.508 (elastic_net)
+
+Output Files:
+
+  Performance data:
+    - training_log.rds / .csv
+    - all_models_results.rds
+
+  Visualizations:
+    - 01_rsquared_distribution.png
+    - 02_algorithm_comparison.png
+    - 03_performance_vs_features.png
+
+  Trained models: 173 files in models/trained/
+
+=============================================================================
+NEXT STEPS:
+  1. Review performance visualizations
+  2. Analyze feature importance for top models
+  3. Run 06_predict.R to evaluate on test set
+  4. Generate final report and visualizations
+=============================================================================

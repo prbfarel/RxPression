@@ -1,0 +1,25 @@
+# R
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Data
+data/raw/*.rds
+data/processed/*.rds
+data/raw/*.csv
+*.h5
+
+# Models
+models/saved_models/*.rds
+models/performance/*.rds
+models/trained/*.rds
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.swp
+*.swo

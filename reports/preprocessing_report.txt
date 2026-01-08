@@ -1,0 +1,73 @@
+=============================================================================
+GDSC Data Preprocessing Report
+=============================================================================
+
+Date: 2026-01-05 15:07:13.966347
+Random seed: 123
+
+Input Data:
+  - Original samples: 802
+  - Original genes: 17611
+  - Original drugs: 190
+
+Preprocessing Steps:
+
+1. Sample Cleaning:
+   - Abnormal samples removed: 1
+   - Remaining samples: 801
+
+2. Gene Filtering:
+   - Low-variance genes removed: 12611
+   - Variance threshold: 0.0338
+   - Selected top variable genes: 5000
+   - Final genes: 5000
+
+3. Drug Filtering:
+   - High-missing drugs removed (>80%): 17
+   - Final drugs: 173
+
+4. Missing Value Imputation:
+   - Method: KNN (k=5)
+   - Drugs imputed: 171
+   - Final missing rate: 0.00%
+
+5. Normalization:
+   - Expression: Z-score per sample
+   - Drug response: No additional scaling (already 0-1)
+
+6. Train/Test Split:
+   - Train samples: 640 (79.9%)
+   - Test samples: 161 (20.1%)
+   - Split method: Random sampling
+
+Output Files:
+   - expr_train.rds: 640 × 5000
+   - drug_train.rds: 640 × 173
+   - expr_test.rds: 161 × 5000
+   - drug_test.rds: 161 × 173
+   - train_test_split.rds: split indices
+   - gene_variance_info.rds: gene selection info
+
+Data Characteristics:
+
+Expression (train):
+   - Mean: -0.000
+   - SD: 1.000
+   - Range: [-1.541, 4.048]
+
+Drug Response (train):
+   - Mean AAC: 0.135
+   - Median AAC: 0.088
+   - Range: [0.000, 0.985]
+   - Missing: 0.00%
+
+=============================================================================
+Preprocessing Completed Succesfully
+=============================================================================
+
+Next Steps:
+  1. Review preprocessing report
+  2. Check data distributions
+  3. Run 04_feature_selection.R (if needed)
+  4. Run 05_train.R for model training
+
