@@ -1,7 +1,11 @@
 #  RxPression
 
+![RxPression](RxPression/results/figures/RxPression.png)
+
 ![Status](https://img.shields.io/badge/status-complete-success)
 [![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
+![Drugs](https://img.shields.io/badge/drugs-173-orange)
+![Test R^2](https://img.shields.io/badge/test%20R%C2%B2-0.172-brightgreen)
 
 ##  Overview
 
